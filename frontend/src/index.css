@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+/* GLOBAL RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+/* BODY */
+
+body {
+background: #f4f7fc;
+font-family: "Segoe UI", sans-serif;
+overflow-x: hidden;
+}
+
+/* ROOT */
+
+#root {
+width: 100%;
+min-height: 100vh;
+}
+
+/* HEADINGS */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin: 0;
+}
+
+/* PARAGRAPHS */
+
+p {
+margin: 0;
+}
+
+/* LINKS */
+
+a {
+text-decoration: none;
+color: inherit;
+}
+
+/* BUTTONS */
+
+button {
+font-family: inherit;
+cursor: pointer;
+}
+
+/* INPUTS */
+
+input,
+select,
+textarea {
+font-family: inherit;
+}
+
+/* IMAGES */
+
+img {
+max-width: 100%;
+display: block;
+}
+
+/* TABLE */
+
+table {
+width: 100%;
+border-collapse: collapse;
+}
