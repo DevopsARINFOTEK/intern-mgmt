@@ -45,12 +45,7 @@ function Header() {
             Interns
           </Link>
 
-          <Link
-            to="/completed"
-            className="hover:text-blue-700 transition"
-          >
-            Completed
-          </Link>
+          
 
         </nav>
       </div>

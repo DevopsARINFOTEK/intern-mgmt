@@ -7,15 +7,7 @@ function Allocation() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Get student data from Registration Page
-  const student = location.state || {
-    fullName: "No Student",
-    email: "",
-    contactNumber: "",
-    collegeName: "",
-    branch: "",
-    year: "",
-  };
+  const student = location.state || {};
 
   const [domain, setDomain] = useState("Cloud Computing");
   const [allocated, setAllocated] = useState(false);
@@ -48,17 +40,18 @@ function Allocation() {
         <p>Intern Management and Allocation</p>
       </div>
 
-      <div className="success-banner">
-        ✅ Registration Completed Successfully
-      </div>
-
       <div className="student-card">
         <h2>Student Information</h2>
 
         <div className="info-grid">
           <div className="info-item">
+            <span>ID</span>
+            <strong>{student.intern_id}</strong>
+          </div>
+
+          <div className="info-item">
             <span>Name</span>
-            <strong>{student.fullName}</strong>
+            <strong>{student.full_name}</strong>
           </div>
 
           <div className="info-item">
@@ -67,13 +60,13 @@ function Allocation() {
           </div>
 
           <div className="info-item">
-            <span>Contact Number</span>
-            <strong>{student.contactNumber}</strong>
+            <span>College Name</span>
+            <strong>{student.college_name}</strong>
           </div>
 
           <div className="info-item">
-            <span>College Name</span>
-            <strong>{student.collegeName}</strong>
+            <span>Degree</span>
+            <strong>{student.degree}</strong>
           </div>
 
           <div className="info-item">
@@ -82,8 +75,8 @@ function Allocation() {
           </div>
 
           <div className="info-item">
-            <span>Year</span>
-            <strong>{student.year}</strong>
+            <span>Status</span>
+            <strong>{student.status}</strong>
           </div>
         </div>
       </div>
@@ -115,7 +108,7 @@ function Allocation() {
             <h3>Allocation Successful 🎉</h3>
 
             <p>
-              <strong>Student:</strong> {student.fullName}
+              <strong>Student:</strong> {student.full_name}
             </p>
 
             <p>

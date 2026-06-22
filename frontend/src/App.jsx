@@ -9,7 +9,6 @@ import InternDashboard from "./components/InternDashboard";
 import StudentList from "./components/StudentList";
 import Interns from "./components/Interns";
 import StatusPage from "./components/StatusPage";
-import CompletionPage from "./components/CompletionPage";
 import UpdateStudent from "./components/UpdateStudent";
 
 function App() {
@@ -17,63 +16,50 @@ function App() {
     <BrowserRouter>
       <Header />
 
-      <main className="min-h-screen">
+      <main>
         <Routes>
+          <Route path="/" element={<InternRegistration />} />
+          <Route path="/register" element={<InternRegistration />} />
 
-          {/* Home */}
-          <Route
-            path="/"
-            element={<InternRegistration />}
-          />
-
-          {/* Register */}
-          <Route
-            path="/register"
-            element={<InternRegistration />}
-          />
-
-          {/* Allocation */}
           <Route
             path="/allocation"
             element={<InternAllocation />}
           />
 
-          {/* Dashboard */}
           <Route
             path="/dashboard"
             element={<InternDashboard />}
           />
 
-          {/* Students */}
           <Route
             path="/students"
             element={<StudentList />}
           />
 
-          {/* Interns */}
           <Route
             path="/interns"
             element={<Interns />}
           />
 
-          {/* Status */}
           <Route
             path="/status"
             element={<StatusPage />}
           />
 
-          {/* Update Student */}
           <Route
             path="/update"
             element={<UpdateStudent />}
           />
 
-          {/* Completed */}
+          {/* Fallback Route */}
           <Route
-            path="/completed"
-            element={<CompletionPage />}
+            path="*"
+            element={
+              <h2 style={{ textAlign: "center" }}>
+                Page Not Found
+              </h2>
+            }
           />
-
         </Routes>
       </main>
 

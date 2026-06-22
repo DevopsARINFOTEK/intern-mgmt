@@ -52,8 +52,8 @@ function Interns() {
     },
   ];
 
-  const openDashboard = (student) => {
-    navigate("/dashboard", {
+  const openAllocation = (student) => {
+    navigate("/allocation", {
       state: student,
     });
   };
@@ -81,6 +81,7 @@ function Interns() {
               <th>Degree</th>
               <th>Branch</th>
               <th>Status</th>
+              <th>Allocation</th>
             </tr>
           </thead>
 
@@ -93,12 +94,19 @@ function Interns() {
                 <td>{student.college_name}</td>
                 <td>{student.degree}</td>
                 <td>{student.branch}</td>
+
+                <td>
+                  <span className="status">
+                    {student.status}
+                  </span>
+                </td>
+
                 <td>
                   <button
-                    className="status"
-                    onClick={() => openDashboard(student)}
+                    className="view-btn"
+                    onClick={() => openAllocation(student)}
                   >
-                    {student.status}
+                    View
                   </button>
                 </td>
               </tr>
